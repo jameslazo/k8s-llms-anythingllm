@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: server-storage-pv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: microk8s-hostpath
+  hostPath:
+    path: /mnt/data/ollama
+  persistentVolumeReclaimPolicy: Retain

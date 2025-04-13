@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: llm
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ollama
+  namespace: llm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ollama
+  template:
+    metadata:
+      labels:
+        app: ollama
+    spec:
+      containers:
+      - name: ollama
+        image: ollama/ollama:latest
+        ports:
+        - containerPort: 11434
+        env:
+        - name: OLLAMA_NUM_CTX
+          value: "4096"
+        - name: OLLAMA_DEBUG
+          value: "1"
+        resources:
+          requests:
+            cpu: "1"
+            memory: "8Gi"
+          limits:
+            cpu: "2"
+            memory: "12Gi"
