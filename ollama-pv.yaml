@@ -4,7 +4,7 @@ metadata:
   name: server-storage-pv
 spec:
   capacity:
-    storage: 5Gi
+    storage: 20Gi
   accessModes:
   - ReadWriteOnce
   storageClassName: microk8s-hostpath

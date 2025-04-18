@@ -1,7 +1,7 @@
 config:
   LLM_PROVIDER: 'ollama'
   OLLAMA_BASE_PATH: 'http://ollama:11434'
-  OLLAMA_MODEL_PREF: 'deepseek-r1:1.5b'
+  OLLAMA_MODEL_PREF: 'gemma-3-4b-it-GGUF:Q4_K_M'
   OLLAMA_MODEL_TOKEN_LIMIT: 8192
   EMBEDDING_ENGINE: 'ollama'
   EMBEDDING_MODEL_PREF: 'nomic-embed-text:latest'
