@@ -3,6 +3,7 @@ config:
   OLLAMA_BASE_PATH: 'http://ollama:11434'
   OLLAMA_MODEL_PREF: 'gemma-3-4b-it-GGUF:Q4_K_M'
   OLLAMA_MODEL_TOKEN_LIMIT: 8192
+  DISABLE_TELEMETRY: 'true'
   EMBEDDING_ENGINE: 'ollama'
   EMBEDDING_MODEL_PREF: 'nomic-embed-text:latest'
   EMBEDDING_BASE_PATH: 'http://ollama:11434'

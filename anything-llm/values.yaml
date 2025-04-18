@@ -10,9 +10,9 @@ image:
   # -- The Docker repository to pull the image from.
   repository: ghcr.io/mintplex-labs/anything-llm
   # -- The specific tag of the image to use.
-  tag: 1.2.2
+  tag: latest
   # -- The pull policy for the image. IfNotPresent means the image will only be pulled if it is not already present locally.
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 # -- Service configuration.
 service:

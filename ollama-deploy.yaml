@@ -21,6 +21,9 @@ spec:
       containers:
       - name: ollama
         image: ollama/ollama:latest
+        volumeMounts:
+        - name: server-storage
+          mountPath: /root/.ollama
         ports:
         - containerPort: 11434
         env:
@@ -35,3 +38,7 @@ spec:
           limits:
             cpu: "2"
             memory: "12Gi"
+      volumes:
+      - name: server-storage
+        persistentVolumeClaim:
+          claimName: server-storage
