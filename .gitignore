@@ -5,6 +5,6 @@
 !*/
 
 !.gitignore
+!.helmignore
 !*.md
 !*.yaml
-
